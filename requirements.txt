@@ -2,6 +2,7 @@ fastapi==0.139.0
 uvicorn==0.51.0
 python-multipart==0.0.32
 fpdf2==2.8.7
+uharfbuzz==0.55.0
 PyMuPDF==1.28.0
 openai==2.45.0
 python-dotenv==1.2.2
