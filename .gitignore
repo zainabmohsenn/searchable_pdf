@@ -1,0 +1,10 @@
+# Secrets — never commit; set DOTS_URL in the Render dashboard instead
+.env
+
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Generated searchable PDFs (ephemeral)
+outputs/

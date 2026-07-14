@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: arabic-ocr-searchable-pdf
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: DOTS_URL
+        sync: false          # set the value in the Render dashboard (kept secret)
+      - key: OCR_WORKERS
+        value: "2"           # free tier has limited RAM/CPU; keep concurrency low
+      - key: PYTHON_VERSION
+        value: "3.11.9"
